@@ -547,11 +547,13 @@ async def handle_admin_panel(message: Message) -> None:
             user_display = f'<a href="tg://user?id={u.telegram_chat_id}">ID: {u.telegram_chat_id}</a>'
             btn_title = f"ID: {u.telegram_chat_id}"
 
-        lines.append(f"{user_display} (ID: <code>{u.telegram_chat_id}</code>)")
+        lines.append(
+            f"{user_display} (ID: <code>{u.telegram_chat_id}</code>) — {prod_count} поз."
+        )
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text=f"Управление: {btn_title}",
+                    text=f"Управление: {btn_title} ({prod_count})",
                     callback_data=f"adm_user_{u.telegram_chat_id}",
                 )
             ]
