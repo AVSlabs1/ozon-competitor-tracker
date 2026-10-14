@@ -27,7 +27,7 @@
 ## Архитектура сервиса
 
 Проект спроектирован по принципам слоистой архитектуры (Clean Architecture / SoC):
-
+```text
 ozon_tracker/
 ├── alerts/ # Telegram-интерфейс на aiogram 3.x (хендлеры, транспорт алертов)
 ├── config/ # Конфигурация через pydantic-settings
@@ -39,3 +39,4 @@ ozon_tracker/
 ├── Dockerfile
 ├── main.py # Точка входа, жизненный цикл браузера и планировщик задач
 └── requirements.txt
+```
