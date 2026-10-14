@@ -1,0 +1,12 @@
+services:
+  ozon_tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ozon_tracker
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./tracker.db:/app/tracker.db
+    network_mode: bridge

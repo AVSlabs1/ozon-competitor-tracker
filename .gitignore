@@ -1,0 +1,14 @@
+﻿.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+project_for_review.txt
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.vscode/
+.idea/
+.pytest_cache/
